@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Sistema de Gimnasios — Bocetos de Pantallas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Repositorio para el desarrollo colaborativo de los bocetos (mockups navegables) de las pantallas del sistema de gestión de gimnasios. El objetivo es que cada integrante del equipo pueda construir sus pantallas en React reutilizando un mismo lenguaje visual, definido en un archivo CSS compartido.
 
-## Available Scripts
+## Stack
 
-In the project directory, you can run:
+- **React** (Create React App)
+- **CSS plano con variables** (custom properties), sin frameworks de estilos ni CSS-in-JS
 
-### `npm start`
+## Estructura del proyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+├── public/
+├── src/
+│   ├── styles/
+│   │   └── theme.css        # Variables y estilos base compartidos (colores, tipografía, componentes)
+│   ├── components/          # Componentes reutilizables
+│   ├── screens/             # Una carpeta por pantalla/boceto
+│   │   ├── Login/
+│   │   ├── Dashboard/
+│   │   └── ...
+│   ├── App.js
+│   └── index.js
+├── .gitignore
+└── README.md
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Cómo levantar el proyecto
 
-### `npm test`
+```bash
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La app queda disponible en `http://localhost:3000`.
 
-### `npm run build`
+## Uso del CSS compartido (`theme.css`)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Todas las pantallas deben construirse usando las variables y clases definidas en `src/styles/theme.css`. Esto asegura consistencia visual entre los bocetos de todo el equipo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para usarlo, importar una sola vez en `index.js` o `App.js`:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+import './styles/theme.css';
+```
 
-### `npm run eject`
+Luego, en el CSS propio de cada pantalla, reutilizar las variables en vez de "hardcodear" valores:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```css
+.mi-pantalla {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Importante:** no modificar `theme.css` sin avisar al equipo, ya que afecta a todas las pantallas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Convenciones del equipo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Cada pantalla se desarrolla en su propia carpeta dentro de `src/screens/`.
+- Nombres de componentes y carpetas en `PascalCase`.
+- Nombres de clases CSS en `kebab-case`.
+- Commits descriptivos (ej: `feat: boceto pantalla de login`).
+- Crear una rama por pantalla/feature, evitar trabajar directo sobre `main`.
 
-## Learn More
+## Flujo de trabajo sugerido
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Crear rama desde `main`: `git checkout -b screen/nombre-pantalla`
+2. Desarrollar la pantalla reutilizando `theme.css`
+3. Abrir Pull Request para revisión
+4. Merge a `main` una vez aprobado

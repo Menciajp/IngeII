@@ -1,0 +1,13 @@
+/*
+  Estilos propios y específicos de esta pantalla.
+  Reutilizar siempre las variables de src/styles/theme.css
+  en vez de "hardcodear" colores, tamaños, etc.
+*/
+
+.ejemplo-pantalla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-lg);
+}
