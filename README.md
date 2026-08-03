@@ -70,3 +70,4 @@ Luego, en el CSS propio de cada pantalla, reutilizar las variables en vez de "ha
 2. Desarrollar la pantalla reutilizando `theme.css`
 3. Abrir Pull Request para revisión
 4. Merge a `main` una vez aprobado
+
