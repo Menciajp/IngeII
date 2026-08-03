@@ -1,0 +1,88 @@
+/*
+  theme.css
+  ---------
+  Archivo central de estilos compartidos por todas las pantallas.
+  Acá van las variables de diseño (colores, tipografía, espaciados)
+  y las clases base de componentes (botones, inputs, cards, etc.)
+
+  ⚠️ Pendiente: completar con la paleta/tipografía definida a partir
+  del estilo de referencia del equipo.
+
+  No modificar esta hoja sin avisar al equipo: afecta a todas las pantallas.
+*/
+
+:root {
+  /* --- Colores (placeholder) --- */
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #6b6b6b;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-border: #e0e0e0;
+
+  /* --- Tipografía (placeholder) --- */
+  --font-family-base: 'Inter', system-ui, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+
+  /* --- Espaciados (placeholder) --- */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+
+  /* --- Bordes --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* --- Clases base reutilizables --- */
+
+.btn {
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.input {
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
