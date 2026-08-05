@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import GestionAlumnos from './screens/GestionAlumnos/GestionAlumnos';
+import AsignarRutina from './screens/AsignarRutina/AsignarRutina';
 function App() {
   return (
     <div className="App">
-      <GestionAlumnos />
+      <AsignarRutina />
     </div>
   );
 }
