@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css'; 
-import MiRutina from './screens/MiRutina/MiRutina';
+import './App.css';
+import VistasRutinas from './screens/VistasRutinas/VistasRutinas';
+
 function App() {
   return (
     <div className="App">
-      {/* Aquí estamos renderizando tu nueva pantalla */}
-      <MiRutina />
+      <VistasRutinas />
     </div>
   );
 }
