@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import AsignarRutina from './screens/AsignarRutina/AsignarRutina';
+import AgregarRutina from './screens/AgregarRutina/AgregarRutina';
 function App() {
   return (
     <div className="App">
-      <AsignarRutina />
+      <AgregarRutina />
     </div>
   );
 }
