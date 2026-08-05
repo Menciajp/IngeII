@@ -1,0 +1,216 @@
+.rp-wrapper {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rp-print-notice {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-md, 8px);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Hoja tipo A4 centrada usando variables del tema */
+.rp-sheet {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg, 8px);
+  box-shadow: var(--shadow-card, 0 8px 24px rgba(0, 0, 0, 0.2));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 950px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+.rp-sheet-header {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rp-logo-text {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.rp-header-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: var(--font-size-sm);
+  gap: 0.2rem;
+}
+
+.rp-header-info strong {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Cuerpo de la hoja */
+.rp-sheet-body {
+  padding: 2rem;
+  flex: 1;
+}
+
+.rp-section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  text-align: left;
+}
+
+/* Datos del alumno en un solo renglón compacto */
+.rp-alumno-single-line {
+  background-color: var(--color-background) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-sm, 6px);
+  padding: 1rem 1.2rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem !important;
+  font-size: var(--font-size-sm);
+}
+
+.rp-inline-item {
+  white-space: nowrap;
+}
+
+.rp-inline-item strong {
+  color: var(--color-text-muted);
+  margin-right: 0.3rem;
+}
+
+.status-activo {
+  color: #3fb950;
+  font-weight: bold;
+}
+
+/* Tabla del reporte */
+.rp-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.rp-table th {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  padding: 0.8rem;
+  border: none;
+}
+
+.rp-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+/* Corte de control por rango de fechas */
+.rp-control-break td {
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
+  font-size: var(--font-size-sm);
+  padding: 0.6rem 1rem !important;
+  border-top: 2px solid var(--color-border) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  text-align: left;
+}
+
+.rp-td-bold {
+  font-weight: 600;
+}
+
+.rp-interes-col {
+  color: #f85149;
+  font-weight: 500;
+}
+
+.rp-td-date {
+  font-family: monospace;
+  color: var(--color-text-muted);
+}
+
+/* Estados de pago */
+.rp-status-badge {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.rp-status-badge.pendiente {
+  color: #f85149;
+}
+
+.rp-status-badge.fuera-termino {
+  color: #d29922;
+}
+
+.rp-status-badge.pagado {
+  color: #3fb950;
+}
+
+/* Pie de página impreso */
+.rp-sheet-footer {
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  background-color: var(--color-background);
+}
+
+.rp-page-number {
+  font-weight: 600;
+}
+
+@media print {
+  body {
+    background-color: #ffffff;
+  }
+  .rp-wrapper {
+    padding: 0;
+    background-color: #ffffff;
+  }
+  .rp-print-notice {
+    display: none;
+  }
+  .rp-sheet {
+    box-shadow: none;
+    max-width: 100%;
+    border: none;
+  }
+}

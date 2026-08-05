@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import VistasRutinas from './screens/VistasRutinas/VistasRutinas';
-
+import ReportePagos from './screens/ReportePagos/ReportePagos';
 function App() {
   return (
     <div className="App">
-      <VistasRutinas />
+      <ReportePagos />
     </div>
   );
 }
