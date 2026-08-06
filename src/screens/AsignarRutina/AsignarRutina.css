@@ -1,0 +1,143 @@
+.ar-wrapper {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ar-header h2 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.ar-alumno-selected-tag {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: left;
+  display: block;
+}
+
+.ar-admin-badge {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: var(--font-size-sm);
+}
+
+.ar-section-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg, 8px);
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.ar-subtitle-info {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Tabla con alineaciones centradas donde corresponde */
+.ar-table th {
+  background-color: var(--color-background);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+/* Cabeceras específicas centradas */
+.ar-table th:nth-child(1),
+.ar-table th:nth-child(4),
+.ar-table th:nth-child(5),
+.ar-table th:nth-child(7) {
+  text-align: center;
+}
+
+.ar-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+/* Celdas específicas centradas */
+.ar-table td:nth-child(1),
+.ar-table td:nth-child(4),
+.ar-table td:nth-child(5),
+.ar-table td:nth-child(7) {
+  text-align: center;
+}
+
+.ar-row-checked {
+  background-color: rgba(88, 166, 255, 0.08);
+}
+
+.ar-td-bold {
+  font-weight: 600;
+}
+
+.ar-musculo-badge {
+  background-color: rgba(187, 134, 252, 0.15);
+  color: #bb86fc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ar-dias-text {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.ar-actions-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+}
