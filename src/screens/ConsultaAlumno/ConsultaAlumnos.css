@@ -1,0 +1,188 @@
+.mi-pantalla {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.error-banner {
+  background-color: var(--color-danger-bg, #fde8e8);
+  color: var(--color-danger, #d32f2f);
+  padding: 1rem;
+  border-radius: var(--radius-md, 6px);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-danger, #d32f2f);
+}
+
+.card {
+  background-color: var(--color-surface, #161b22);
+  border: 1px solid var(--color-border, #30363d);
+  border-radius: var(--radius-lg, 8px);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card, none);
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border, #30363d);
+  padding-bottom: 0.5rem;
+}
+
+.filters-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #8b949e);
+}
+
+.search-group {
+  flex: 2;
+  min-width: 250px;
+}
+
+.date-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.input-control {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border, #30363d);
+  color: var(--color-text);
+  border-radius: var(--radius-sm, 4px);
+  outline: none;
+}
+
+.input-control:focus {
+  border-color: var(--color-primary, #58a6ff);
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: var(--color-background);
+  color: var(--color-text-muted, #8b949e);
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--color-border, #30363d);
+}
+
+.custom-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--color-border, #30363d);
+  font-size: 0.9rem;
+}
+
+.th-center, .td-center {
+  text-align: center;
+}
+
+/* Fila de Corte de Control por Estado */
+.control-break-row td {
+  background-color: var(--color-primary-light, rgba(88, 166, 255, 0.1));
+  color: var(--color-primary, #58a6ff);
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+}
+
+.no-data-msg {
+  text-align: center;
+  color: var(--color-text-muted, #8b949e);
+  padding: 2rem !important;
+}
+
+/* Tooltip para Patologías */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.info-icon {
+  color: var(--color-primary, #58a6ff);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tooltip-content {
+  visibility: hidden;
+  width: 180px;
+  background-color: var(--color-text, #333);
+  color: var(--color-surface, #fff);
+  text-align: left;
+  border-radius: var(--radius-sm, 4px);
+  padding: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip-container:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Botones genéricos de apoyo */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-danger {
+  background-color: transparent;
+  border-color: var(--color-danger, #d32f2f);
+  color: var(--color-danger, #d32f2f);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-border, #8b949e);
+  color: var(--color-text);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary, #58a6ff);
+}

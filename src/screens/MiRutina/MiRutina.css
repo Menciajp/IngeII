@@ -1,0 +1,326 @@
+.mi-pantalla {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Header de la App */
+.rutina-header {
+  background-color: #0047ff; /* Azul institucional app móvil */
+  color: #ffffff;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-lg, 12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.rutina-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.user-avatar {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* Tarjeta Principal de Resumen */
+.rutina-summary-card {
+  margin-bottom: 1.2rem;
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.saludo {
+  font-size: 0.85rem;
+  color: var(--color-text-muted, #8b949e);
+}
+
+.summary-top h3 {
+  margin: 0.2rem 0 0 0;
+  font-size: 1.4rem;
+}
+
+.progress-circle-badge {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border, #30363d);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.rutina-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.rutina-tag {
+  color: #2f81f7;
+  font-weight: 600;
+}
+
+.rutina-vencimiento {
+  color: var(--color-text-muted, #8b949e);
+}
+
+.rutina-stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border, #30363d);
+  padding-top: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.stat-icon {
+  font-size: 1.2rem;
+}
+
+.stat-item strong {
+  font-size: 1rem;
+  display: block;
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-text-muted, #8b949e);
+}
+
+/* Barra de progreso de hoy */
+.progreso-hoy-container {
+  margin-bottom: 1.5rem;
+}
+
+.progreso-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted, #8b949e);
+}
+
+.progreso-fraction {
+  color: #3fb950;
+  font-weight: bold;
+}
+
+.progress-bar-bg {
+  background-color: var(--color-border, #30363d);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #3fb950;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Acordeones de Secciones Musculares */
+.section-group {
+  margin-bottom: 1.2rem;
+}
+
+.section-header-collapsible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-border, #30363d);
+  margin-bottom: 0.8rem;
+}
+
+.section-title-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-title-left h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.section-title-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.badge-counter {
+  background-color: rgba(47, 129, 247, 0.15);
+  color: #2f81f7;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.2s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Tarjetas de Ejercicios individuales */
+.exercises-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.exercise-card {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem !important;
+  margin-bottom: 0 !important;
+  gap: 1rem;
+}
+
+.exercise-icon-box {
+  background-color: rgba(47, 129, 247, 0.1);
+  color: #2f81f7;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.exercise-details {
+  flex: 1;
+}
+
+.exercise-details h5 {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.exercise-details p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #8b949e);
+}
+
+.exercise-tip {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #2f81f7;
+  margin-top: 0.2rem;
+}
+
+.exercise-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon-small {
+  color: var(--color-text-muted, #8b949e);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Círculo de selección interactivo */
+.check-circle {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-border, #8b949e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: transparent;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.check-circle.checked {
+  background-color: #3fb950;
+  border-color: #3fb950;
+  color: #ffffff;
+}
+
+/* Footer y Botón Entrenar */
+.rutina-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer-instruction {
+  font-size: 0.8rem;
+  color: var(--color-text-muted, #8b949e);
+  margin-bottom: 1rem;
+}
+
+.btn-entrenar {
+  width: 100%;
+  background-color: #2ea043;
+  color: #ffffff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: var(--radius-md, 8px);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-entrenar:hover {
+  background-color: #238636;
+}
